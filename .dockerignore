@@ -46,3 +46,10 @@ superset/static/assets/
 superset-websocket/dist/
 venv
 .venv
+
+# 🔥 ADICIONADO PARA BUILD NO GITHUB
+superset-frontend/node_modules
+node_modules
+docs
+tests
+*.log
