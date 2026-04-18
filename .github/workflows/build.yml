@@ -12,13 +12,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 🔥 evita problema de Node deprecated
+      # 🔥 força Node 24 (evita warnings futuros)
       - name: Force Node 24
         run: echo "FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true" >> $GITHUB_ENV
 
-      # 🔥 aumenta estabilidade do Docker build
+      # 🚀 build usando Dockerfile leve
       - name: Build Docker image
-        run: docker build -t superset-pt-br . --progress=plain
+        run: docker build -t superset-pt-br -f Dockerfile.simple . --progress=plain
 
       - name: Save image
         run: docker save superset-pt-br -o superset-pt-br.tar

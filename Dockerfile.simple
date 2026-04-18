@@ -1,0 +1,7 @@
+FROM apache/superset:5.0.0
+
+USER root
+
+COPY superset/translations/pt_BR /app/superset/translations/pt_BR
+
+USER superset
