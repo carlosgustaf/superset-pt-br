@@ -19,7 +19,7 @@ jobs:
         run: docker save superset-pt-br -o superset-pt-br.tar
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: superset-image
           path: superset-pt-br.tar
